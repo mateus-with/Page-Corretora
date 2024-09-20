@@ -1,0 +1,52 @@
+/* Seção de herói com a imagem de fundo */
+.hero-section {
+    background-image: url('/static/imgs/blue-car-speed-motion-stretch-style.jpg');
+    background-size: cover;        /* A imagem cobrirá toda a área disponível */
+    background-position: center; /* A imagem começa no canto superior esquerdo */
+    background-repeat: no-repeat;  /* Não repete a imagem */
+    height: 70vh;                  /* Ocupará 70% da altura da viewport */
+    width: 100vw;                  /* Ocupará 100% da largura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
+/* Cor do texto dentro da imagem de fundo */
+.hero-section .container {
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente para melhorar a legibilidade */
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+}
+
+/* Seção de conteúdo abaixo da imagem */
+.content-section {
+    padding: 50px 0;
+}
+
+/* Media queries para telas pequenas */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 50vh;              /* Reduz a altura da imagem em telas menores */
+    }
+
+    .hero-section .container {
+        padding: 10px;             /* Ajusta o espaçamento interno */
+        font-size: 14px;           /* Tamanho da fonte menor em dispositivos pequenos */
+    }
+}
+
+/* Media queries para telas muito pequenas */
+@media (max-width: 576px) {
+    .hero-section {
+        height: 40vh;              /* Reduz ainda mais a altura em telas muito pequenas */
+    }
+
+    .hero-section .container {
+        padding: 5px;              /* Ajuste adicional do padding */
+        font-size: 12px;           /* Tamanho da fonte ainda menor */
+    }
+}
